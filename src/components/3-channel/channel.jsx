@@ -7,7 +7,8 @@ function YouTubeChannels() {
   const [channels, setChannels] = useState([]);
   const [error, setError] = useState(null);
 
-  const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+  //const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+  const apiKey = 'AIzaSyD5qrB8mrQSMGuslrOoWOmwuf97k2ElWbg'
 
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',

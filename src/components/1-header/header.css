@@ -1,0 +1,13 @@
+.navBar {
+    height: 70px;
+    text-align: center;
+    /* border-bottom: 1px solid var(--primary-color); */
+}
+.logo {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -30px;
+    padding: 0px 20px;
+    background-color: #fff;
+    /* border-bottom: 2px dotted var(--primary-color); */
+}

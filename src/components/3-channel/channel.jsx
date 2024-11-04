@@ -9,6 +9,7 @@ function YouTubeChannels() {
 
   const apiKey = 'AIzaSyD5qrB8mrQSMGuslrOoWOmwuf97k2ElWbg';
   console.log("YouTube API Key:", import.meta.env.VITE_YOUTUBE_API_KEY);
+  console.log("test go here");
 
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',

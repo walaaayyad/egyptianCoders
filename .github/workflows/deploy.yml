@@ -10,12 +10,22 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
+    env:
+      VITE_YOUTUBE_API_KEY: ${{ secrets.VITE_YOUTUBE_API_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
+
+       - name: Cache Node.js modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1

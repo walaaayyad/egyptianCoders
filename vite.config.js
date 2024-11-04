@@ -5,7 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react(),
     ViteComponents({
-                include: [/\.vue$/, /\.vue\?.*vue(?!&type=style)/],
                 exclude: [
                     /[\\/]node_modules[\\/](?!VITE_YOUTUBE_API_KEY)/,
                     /[\\/]\.git[\\/]/,

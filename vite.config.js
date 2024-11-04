@@ -4,8 +4,6 @@ import ViteComponents from 'vite-plugin-components';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),
-    ViteComponents()
-  ],
+  plugins: [react()],
   base: "/egyptianCoders/"
 })

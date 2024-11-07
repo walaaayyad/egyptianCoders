@@ -36,7 +36,7 @@ function YouTubeChannels() {
     const fetchChannels = async () => {
       try {
         // Using fetch instead of axios
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${apiKey}`);
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`);
         
         if (!response.ok) {
           throw new Error(`Error: ${response.status} - ${response.statusText}`);
@@ -50,7 +50,7 @@ function YouTubeChannels() {
     };
 
     fetchChannels();
-  }, [channelIds, apiKey]);
+  }, [channelIds, import.meta.env.VITE_YOUTUBE_API_KEY]);
 
   if (error) {
     return <div>Error loading channels: {error.message}</div>;

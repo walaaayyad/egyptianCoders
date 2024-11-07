@@ -7,6 +7,7 @@ function YouTubeChannels() {
 
   // Use the environment variable for API key
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+  console.log(import.meta.env.VITE_YOUTUBE_API_KEY);
 
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',

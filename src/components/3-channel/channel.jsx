@@ -9,6 +9,10 @@ function YouTubeChannels() {
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
   console.log(import.meta.env.VITE_YOUTUBE_API_KEY);
 
+  const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
+console.log("API URL:", apiUrl); // Log the full URL
+
+
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',
     'UCSNkfKl4cU-55Nm-ovsvOHQ',

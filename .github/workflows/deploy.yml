@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4  # Use the latest version of the checkout action
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4 
+        uses: actions/setup-node@v4  # Use version v4 which fully supports Node.js 20
         with:
-          node-version: '20'  
+          node-version: '20'  # Set Node.js version to 20
 
       - name: Install dependencies
         run: npm install
@@ -29,7 +29,11 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
 
+      - name: Set up GitHub token for deployment
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
       - name: Deploy to GitHub Pages
-        run: npm run deploy  
+        run: npm run deploy  # This will run the `gh-pages` deploy script
         env:
-          VITE_YOUTUBE_API_KEY: ${{ secrets.VITE_YOUTUBE_API_KEY }}  
+          VITE_YOUTUBE_API_KEY: ${{ secrets.VITE_YOUTUBE_API_KEY }}  # Inject API key from GitHub Secrets

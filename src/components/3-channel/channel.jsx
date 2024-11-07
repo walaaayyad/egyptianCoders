@@ -9,9 +9,6 @@ function YouTubeChannels() {
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
   console.log('Api test',import.meta.env.VITE_YOUTUBE_API_KEY);
 
-  const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
-console.log("API URL:", apiUrl); // Log the full URL
-
 
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',
@@ -38,6 +35,8 @@ console.log("API URL:", apiUrl); // Log the full URL
 
   useEffect(() => {
     const fetchChannels = async () => {
+      const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
+      console.log("API URL:", apiUrl); 
       try {
         // Using fetch instead of axios
         const response = await fetch(apiUrl);

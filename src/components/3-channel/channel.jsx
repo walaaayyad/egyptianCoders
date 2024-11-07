@@ -7,7 +7,7 @@ function YouTubeChannels() {
 
   // Use the environment variable for API key
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
-  console.log(import.meta.env.VITE_YOUTUBE_API_KEY);
+  console.log('Api test',import.meta.env.VITE_YOUTUBE_API_KEY);
 
   const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`;
 console.log("API URL:", apiUrl); // Log the full URL
@@ -40,7 +40,7 @@ console.log("API URL:", apiUrl); // Log the full URL
     const fetchChannels = async () => {
       try {
         // Using fetch instead of axios
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`);
+        const response = await fetch(apiUrl);
         
         if (!response.ok) {
           throw new Error(`Error: ${response.status} - ${response.statusText}`);

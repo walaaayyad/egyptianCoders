@@ -2,14 +2,12 @@ import './channel.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 function YouTubeChannels() {
   const [channels, setChannels] = useState([]);
   const [error, setError] = useState(null);
 
-  const apiKey = 'AIzaSyD5qrB8mrQSMGuslrOoWOmwuf97k2ElWbg';
-  console.log("YouTube API Key:", import.meta.env.VITE_YOUTUBE_API_KEY);
-  console.log("test go here");
+  // Use the environment variable here
+  const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
 
   const channelIds = [
     'UCveX_0uBOHVHbpV838OGXVA',
@@ -41,7 +39,7 @@ function YouTubeChannels() {
           params: {
             part: 'snippet,contentDetails',
             id: channelIds,
-            key: apiKey,
+            key: apiKey,  // Use the API key from environment
           },
         });
         setChannels(response.data.items);
@@ -52,8 +50,9 @@ function YouTubeChannels() {
 
     fetchChannels();
   }, [channelIds, apiKey]);
-if (error) {
-    return <div>Error loading channel: {error.message}</div>;
+
+  if (error) {
+    return <div>Error loading channels: {error.message}</div>;
   }
 
   if (!channels) {
@@ -62,20 +61,18 @@ if (error) {
 
   return (
     <div className='channels container'>
-        {channels.map(channel => (
-          <div className="channel flex" key={channel.id}>
-            <img className='img' src={channel.snippet.thumbnails.default.url} alt={channel.snippet.title} />
-            <h2 className='title'>{channel.snippet.title}</h2>
-            <p>{channel.snippet.description.length > 1 ? channel.snippet.description : "لا يوجد وصف للقناة" }</p>
-            {/* <p> تم إنشاء القناة سنة :{channel.snippet.publishedAt.substring(0, 4)} </p> */}
-            <a className='btn flex' href={`https://www.youtube.com/channel/${channel.id}`} target="_blank" rel="noopener noreferrer">
-              View Channel
-            </a>
-          </div>
-        ))}
+      {channels.map(channel => (
+        <div className="channel flex" key={channel.id}>
+          <img className='img' src={channel.snippet.thumbnails.default.url} alt={channel.snippet.title} />
+          <h2 className='title'>{channel.snippet.title}</h2>
+          <p>{channel.snippet.description.length > 1 ? channel.snippet.description : "لا يوجد وصف للقناة"}</p>
+          <a className='btn flex' href={`https://www.youtube.com/channel/${channel.id}`} target="_blank" rel="noopener noreferrer">
+            View Channel
+          </a>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
-
-export default YouTubeChannels
+export default YouTubeChannels;

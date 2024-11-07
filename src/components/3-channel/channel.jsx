@@ -1,12 +1,11 @@
 import './channel.css';
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 function YouTubeChannels() {
   const [channels, setChannels] = useState([]);
   const [error, setError] = useState(null);
 
-  // Use the environment variable here
+  // Use the environment variable for API key
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
 
   const channelIds = [
@@ -35,14 +34,15 @@ function YouTubeChannels() {
   useEffect(() => {
     const fetchChannels = async () => {
       try {
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels`, {
-          params: {
-            part: 'snippet,contentDetails',
-            id: channelIds,
-            key: apiKey,  // Use the API key from environment
-          },
-        });
-        setChannels(response.data.items);
+        // Using fetch instead of axios
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${apiKey}`);
+        
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} - ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        setChannels(data.items);
       } catch (err) {
         setError(err);
       }

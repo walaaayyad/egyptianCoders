@@ -39,3 +39,8 @@ jobs:
         run: npm run deploy  # This will run the `gh-pages` deploy script
         env:
           VITE_YOUTUBE_API_KEY: ${{ secrets.VITE_YOUTUBE_API_KEY }}  # Inject API key for runtime
+
+      # Optional step to check if environment variables are being passed correctly in the build step
+      - name: Check environment variable during build
+        run: |
+          echo "VITE_YOUTUBE_API_KEY=${{ secrets.VITE_YOUTUBE_API_KEY }}" # Ensure it's passed

@@ -11,7 +11,6 @@ function hero() {
         <p> كود بالمصري،  هو وجهتك لتجد أفضل قنوات يوتيوب لمطوري البرمجيات في مصر.<br/> استمتع بدروس وشروحات تساهم في تطوير مهاراتك واكتساب المعرفة في عالم البرمجة والتكنولوجيا.</p>
       </div>
       <div className="heroImg">
-        {/* <img src="./images/hero.png" alt="" /> */}
         <Lottie animationData={heroImg}/>
       </div>
       </div>

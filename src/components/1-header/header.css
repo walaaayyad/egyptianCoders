@@ -1,6 +1,7 @@
 .navBar {
     height: 70px;
     text-align: center;
+    background-color: #fff;
     /* border-bottom: 1px solid var(--primary-color); */
 }
 .logo {

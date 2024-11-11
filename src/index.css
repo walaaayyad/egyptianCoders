@@ -1,3 +1,7 @@
+/*
+1- General
+2- Container
+3- Buttons
 /*====================
       1- General
 ======================*/
@@ -7,8 +11,9 @@
     box-sizing: border-box;
 } 
 :root {
-  --primary-color: #18214b;
-  --secondary-color: #ffcc58;
+  /* --primary-color: #18214b; */
+  --primary-color: #375752;
+  --secondary-color: #ffbf54;
 }
 html {
   scroll-behavior: smooth;
@@ -16,6 +21,7 @@ html {
 }
 body {
   color: var(--primary-color);
+  background-color: rgb(19 1 23);;
 }
 .border {
   border: 1px solid red;
@@ -29,12 +35,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  /* margin: auto;
+  margin-top: 70px; */
 }
 .flex {
   display: flex;
   align-items: center ;
   justify-content: center;
+}
+
+/*====================
+    3- Buttons
+======================*/
+
+.btn {
+    border: none;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: inherit;
+    border: 1px solid #ffcd5877;
+    color: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+.btn:hover {
+    box-shadow: none;
+    color: #fff;
+    background: var(--secondary-color); 
 }
 
 /*----------------------------------------------------------------------------------

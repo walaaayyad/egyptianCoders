@@ -1,47 +1,52 @@
 .hero {
     height: 60vh;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     flex-direction: column;
-    margin-bottom: 70px;
-    background: rgb(235,237,238);
-    background: linear-gradient(180deg, rgba(235,237,238,1) 42%, rgba(253,251,251,1) 66%, rgba(255,255,255,1) 87%);
+    /* justify-content: end !important; */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('./images/egyptian-wall.avif'); /*https://www.freepik.com/free-vector/egyptian-pyramids-night-landscape-cartoon_4394561.htm#fromView=image_search_similar&page=10&position=23&uuid=20b8d009-9f99-4be6-98f4-c764ec21bad5*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px 30px;
+    border-radius: 30px;
+
+}
+.hero .container {
+    flex-direction: column;
+}
+.hero .bottom-section {
+    margin-top: 20px;
+    margin-bottom: -70px;
 }
 .heroImg {
-    width: 30%;
+    width: 27%;
+    margin-top: 50px;
     transform: rotateY(180deg);
 }
 .heroImg svg {
     /* width: 80% !important; */
 }
 .heroTitle {
-    margin: auto;
+    text-align: center;
 }
 .heroTitle h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 20px;
 }
 .heroTitle p {
-    font-size: 1.6em;
+    font-size: 1.7em;
     line-height: 50px;
 }
 .btns {
     width: 40%;
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 .hero-btn {
-    width: 45%;
-    height: 50px;
-    margin-top: -5%;
-    border: none;
-    border-radius: 10px;
+    width: 70% !important;
+    height: 60px !important;
+    margin-bottom: 15px;
     font-size: 1.3em;
-    background: rgb(235,237,238);
-    box-shadow: 10px 15px 30px -10px rgba(0, 0, 0, 0.15), 
-                inset 10px 10px 10px rgba(255, 255, 255, 0.75), 
-                inset -1px -1px 10px rgba(0, 0, 0, 0.2);
-                cursor: pointer;
-    transition: all 1s ease;
+    
 }
 .hero-btn:active {
     transform: scale(0.8);

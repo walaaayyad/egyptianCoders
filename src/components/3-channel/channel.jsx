@@ -30,7 +30,11 @@ function YouTubeChannels() {
     'UCnGblT_CyMwswTIH9QmJ3YQ',
     'UCpnMFON8FKbCCHp8GTEYWHw',
     'UCJu5uNExWKx1Vrv6Ah5SHfA',
-    'UCdHbeembdjHbbCY5a3ZqXZw'
+    'UCdHbeembdjHbbCY5a3ZqXZw',
+    'UCPpguAKsCona6eJBjWT-2Cw',
+    'UC2Gl0VkJjuMZh2jUkW6GI7Q',
+    'UCiOouGMUwmtrH94zYUnlOMQ',
+    'UCNMvR21W292doQIU326HQTQ'
   ].join(','); 
 
   useEffect(() => {

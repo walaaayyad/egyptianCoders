@@ -51,3 +51,56 @@
 .hero-btn:active {
     transform: scale(0.8);
 }
+
+/*----------------------------------------------------------------------------------
+**********************************  MEDIA QUERY **********************************
+-----------------------------------------------------------------------------------*/
+/* TABLET SMALL VERSION ONLY */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+    margin: 0;
+    margin-bottom: 50px;
+    border-radius: 0px;
+    background-size: contain;
+    background-color: #0e0020;
+  }
+  .heroTitle h1 {
+    font-size: 2.5em;
+  }
+  .heroTitle p {
+    font-size: 1.2em;
+    line-height: 40px;
+  }
+}
+/****************************************/
+/* MOBILE VERSION ONLY */
+@media (max-width: 576px) {
+  .heroTitle h1 {
+    font-size: 2em;
+  }
+  .heroTitle p {
+    font-size: 1em;
+    line-height: 40px;
+    width: 90%;
+    margin: auto;
+  }
+}
+/****************************************/
+/* VERY SMALLMOBILE VERSION ONLY */
+
+@media (max-width: 460px) {
+  .hero {
+    height: 35vh;
+    margin: 60px auto;
+  }
+  .heroTitle h1 {
+    font-size: 40px;
+    margin: 20px auto;
+  }
+  .heroTitle p {
+    line-height: 30px;
+    width: 98%;
+    font-size: 20px;
+  }
+}

@@ -84,6 +84,9 @@ body {
   /* body {
       background-color: #d52ac4;
   } */
+  .container {
+    width: 100%;
+  }
     
 }
 
@@ -92,7 +95,7 @@ body {
 @media (max-width: 992px) {
   /* body {
       background-color: #2b95e0;
-  } */   
+  }    */
 }
 /*******************************************/
 /* TABLET SMALL VERSION ONLY */
@@ -107,7 +110,7 @@ body {
 @media (max-width: 576px) {
   /* body {
       background-color: #ecde1a;
-  }  */    
+  }   */
 }
 /****************************************/
 /* VERY SMALLMOBILE VERSION ONLY */

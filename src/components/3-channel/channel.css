@@ -61,3 +61,56 @@ background: linear-gradient(to right, #dba228, #b21f1f, #506fee); /* W3C, IE 10+
     background: rgb(34 10 36);
     box-shadow: inset -3px -3px 9px #ffc10747, inset 1px 1px 7px rgb(55 30 100 / 90%);
 }
+
+
+/*----------------------------------------------------------------------------------
+**********************************  MEDIA QUERY **********************************
+-----------------------------------------------------------------------------------*/
+
+/*****************************************/
+/* TABLET MEDIUM & LARGE VERSION ONLY */
+@media (max-width: 992px) {
+  .channel {
+    width: 45%;
+  }
+}
+/*******************************************/
+/* TABLET SMALL VERSION ONLY */
+@media (max-width: 768px) {
+   .channel {
+    width: 80%;
+    margin: 30px 10px;
+  }
+}
+
+/****************************************/
+/* MOBILE VERSION ONLY */
+@media (max-width: 576px) {
+  .channel {
+    width: 90%;
+  } 
+}
+/****************************************/
+/* VERY SMALLMOBILE VERSION ONLY */
+
+@media (max-width: 460px) {
+  .channel {
+    width: 95%;
+    height: 390px;
+    margin: 35px 10px;
+  } 
+  .channel p {
+    width: 98%;
+    height: 200px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .img {
+    width: 95px;
+    top: -12%;
+    padding: 10px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}

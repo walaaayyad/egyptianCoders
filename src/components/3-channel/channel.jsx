@@ -54,6 +54,10 @@ function YouTubeChannels() {
   const filterSearchInput = channels.filter(channel => {
     return channel.snippet.title.toLowerCase().includes(searchVid);
   })
+  /* Clear the searchBar user input */
+  const clearSearchBar = ()=> {
+    setSearchVid('');
+  }
 
 
   return (
@@ -61,6 +65,7 @@ function YouTubeChannels() {
       <SearchBar  
         searchVid = {searchVid}
         handleSearchInput= {handleSearchInput}
+        clearSearchBar = {clearSearchBar}
       />
 
       <div className='channels-content flex'>

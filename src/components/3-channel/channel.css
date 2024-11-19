@@ -68,6 +68,9 @@
 /*====================
     3- Search Bar
 ======================*/
+.searchBox {
+  position: relative;
+}
 .searchBar {
   width: 300px;
   height: 40px;
@@ -75,6 +78,17 @@
   border-radius: 20px;
   border: none;
   margin-bottom: 70px;
+}
+.searchBar:focus-visible {
+  outline-color: var(--secondary-color);
+}
+.icon-close {
+  color: gray;
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
 /*====================
     4- Buttons
@@ -104,12 +118,22 @@
 /*----------------------------------------------------------------------------------
 **********************************  MEDIA QUERY **********************************
 -----------------------------------------------------------------------------------*/
+/* DESKTOP VERSION ONLY */
 
+@media (min-width: 993px) {
+  .searchBar {
+  width: 550px;
+  }
+    
+}
 /*****************************************/
 /* TABLET MEDIUM & LARGE VERSION ONLY */
 @media (max-width: 992px) {
   .channel {
     width: 45%;
+  }
+  .searchBar {
+  width: 500px;
   }
 }
 /*******************************************/
@@ -118,6 +142,9 @@
    .channel {
     width: 80%;
     margin: 30px 10px;
+  }
+  .searchBar {
+  width: 350px;
   }
 }
 

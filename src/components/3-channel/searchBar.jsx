@@ -1,13 +1,16 @@
 import React from 'react'
+import './channel.css';
 
-function searchBar({handleSearchInput, searchVid}) {
+function searchBar({handleSearchInput, searchVid, clearSearchBar}) {
   return (
-    <div>
-        <input type="text"
-               className='searchBar'
-               placeholder='أدخل اسم القناة..'
-               value={searchVid}
-               onChange={handleSearchInput} />
+    <div className='searchBox'>
+        <input 
+          type="text"
+          className='searchBar'
+          placeholder='أدخل اسم القناة..'
+          value={searchVid}
+          onChange={handleSearchInput} />
+      <span className='icon-close' onClick={clearSearchBar}></span>
     </div>
   )
 }

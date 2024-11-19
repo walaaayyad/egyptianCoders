@@ -1,7 +1,6 @@
 /*
 1- General
 2- Container
-3- Buttons
 /*====================
       1- General
 ======================*/
@@ -44,29 +43,7 @@ body {
   justify-content: center;
 }
 
-/*====================
-    3- Buttons
-======================*/
 
-.btn {
-    border: none;
-    width: 200px;
-    height: 45px;
-    border-radius: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-decoration: none;
-    margin-top: 20px;
-    background-color: inherit;
-    border: 1px solid #ffcd5877;
-    color: var(--secondary-color);
-    transition: all 0.5s ease;
-}
-.btn:hover {
-    box-shadow: none;
-    color: #fff;
-    background: var(--secondary-color); 
-}
 
 /*----------------------------------------------------------------------------------
 **********************************  MEDIA QUERY **********************************

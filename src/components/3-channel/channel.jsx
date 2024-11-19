@@ -1,60 +1,19 @@
 import './channel.css';
+import SearchBar from './searchBar'
+import Data from './data'
 import React, { useEffect, useState } from 'react';
 
 function YouTubeChannels() {
   const [channels, setChannels] = useState([]);
   const [error, setError] = useState(null);
+  const [searchVid, setSearchVid] = useState('')
 
   // Use the environment variable for API key
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
-  const data = [
-    'UCveX_0uBOHVHbpV838OGXVA',
-    'UCSNkfKl4cU-55Nm-ovsvOHQ',
-    'UCvqYqoAu_Yp2v3hOBhi6qiQ',
-    'UCGP8LgaWO1lLfFQUQ2BA7rA',
-    'UC5PbBz_roYczmUR6gg_OAxw',
-    'UCq_xgufsy1KrGsmJq7mFH-g',
-    'UCWX_0VvMxl0_XosvYOZ7O0g',
-    'UCbQh1yxBPVhyjB-G_blFFEQ',
-    'UCFnqbM05-W4VpmzZj36-Kog',
-    'UC4Y8dVfo_-aydzENDmE7wTw',
-    'UC5COvx1Z8fnfvVkafqL_UZg',
-    'UCy_3UvdcT8Ljbz6Md-6b32w',
-    'UCs8PwUcH93uchrEZkB8ltNw',
-    'UCw42KxUjtJ68yRXIHi6Fe-w',
-    'UCuwTHYdMavwEPsZ6OAkXfig',
-    'UC3UWam15SOjWxg_zCy0tXmw',
-    'UCnGblT_CyMwswTIH9QmJ3YQ',
-    'UCpnMFON8FKbCCHp8GTEYWHw',
-    'UCJu5uNExWKx1Vrv6Ah5SHfA',
-    'UCdHbeembdjHbbCY5a3ZqXZw',
-    'UCPpguAKsCona6eJBjWT-2Cw',
-    'UC2Gl0VkJjuMZh2jUkW6GI7Q',
-    'UCiOouGMUwmtrH94zYUnlOMQ',
-    'UCNMvR21W292doQIU326HQTQ',
-    'UCywDxXiDYW3fDsxN1CtFvEw',
-    'UC4Hz-ntDHefICIBkutpadBA',
-    'UCtk1PX6rwD1A4yBsfXTVCcw',
-    'UC0bLYqDH3v-4LgqqzJp9e2Q',
-    'UCh-Wyi7aWSkvGujc-5FKc4w',
-    'UC-TeQlDX3eBHHXvzCb7DH9g',
-    'UCo0qWmxZdc1FhAL5emRNzcA',
-    'UChCMIwQrelEqLZT7Lt1L5Og',
-    'UCGn0UnpR7wbIzSXaKARH2dA',
-    'UCqzsLuqrvc-tQQ28fV5SZNQ',
-    'UCtOyb8800Av9Q-7i-l2mYyA',
-    'UCZiV7heCuc_307kI9Ze_7Mw',
-    'UCV_YCp6YEC74RbgLn3ninag',
-    'UCuJlicMvOtLYLK8pe2d2jbQ',
-    'UCN6CFzqrkiEfC93rjywpAhQ',
-    'UCEwfTBslCkubj_TlTBLNyNA',
-    'UCoqTiDGxa7C7CSDDq8K7_7A',
-    'UCUGC4ks3qfq5fLN8ElzuKhA',
-    'UCNpJQYA7qh3PyAgMUrA4oxw'
-  ]
-  const channelIds = data.join(','); 
+  const channelIds = Data.join(',');
+   
 
-  console.log(data.length);
+  console.log(Data.length);
 
   useEffect(() => {
     const fetchChannels = async () => {
@@ -67,8 +26,8 @@ function YouTubeChannels() {
           throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
         
-        const data = await response.json();
-        setChannels(data.items);
+        const Data = await response.json();
+        setChannels(Data.items);
       } catch (err) {
         setError(err);
       }
@@ -85,9 +44,28 @@ function YouTubeChannels() {
     return <div>Loading...</div>;
   }
 
+  /* Handle Search Bar User Input  */
+  const handleSearchInput = (e)=> {
+    let lowerCase = e.target.value.toLowerCase();
+    setSearchVid(lowerCase)
+    console.log(searchVid);
+  }
+  /* Filter Videos Based On User Search */
+  const filterSearchInput = channels.filter(channel => {
+    return channel.snippet.title.toLowerCase().includes(searchVid);
+  })
+
+
   return (
     <div className='channels container'>
-      {channels.map(channel => (
+      <SearchBar  
+        searchVid = {searchVid}
+        handleSearchInput= {handleSearchInput}
+      />
+
+      <div className='channels-content flex'>
+        {filterSearchInput.length > 0 ? (
+          filterSearchInput.map(channel => (
         <div className="channel flex" key={channel.id}>
           <img className='img' src={channel.snippet.thumbnails.default.url} alt={channel.snippet.title} />
           <h2 className='title'>{channel.snippet.title}</h2>
@@ -96,7 +74,12 @@ function YouTubeChannels() {
             View Channel
           </a>
         </div>
-      ))}
+      ))
+        ): (
+        <p>No Result</p>
+        )}
+
+      </div>
     </div>
   );
 }

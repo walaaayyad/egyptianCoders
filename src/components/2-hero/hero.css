@@ -60,7 +60,7 @@
   .hero {
     height: 40vh;
     margin: 0;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     border-radius: 0px;
     background-size: contain;
     background-color: #0e0020;

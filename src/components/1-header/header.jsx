@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './header.css'
 import NavListData from './navListData'
 
@@ -6,12 +6,14 @@ function header() {
   const [showList, setShowList] = useState(false)
   const channelsList = NavListData;
   console.log('channelsList',channelsList.length)
+
   return (
     <div className='navBar'>
       <img className='logo' src="./images/logo2.png" alt="" />
-      <button className='listOpenBtn icon-star' onClick={()=> setShowList(true)}></button>
+      <button className={showList? 'icon-close' : 'icon-star'} onClick={()=> setShowList(!showList)}></button>
       <div className={showList ? 'quick-list' : 'quick-list close'}>
-        <div className='listCloseBtn'><span className='icon-close' onClick={()=> setShowList(false)}></span></div>
+        {/* <div className='listCloseBtn'><span className='icon-close' onClick={()=> setShowList(false)}></span>
+        </div> */}
         {channelsList.map(item => {
         return (
           <a 

@@ -83,7 +83,7 @@
 .searchBar:focus-visible {
   outline-color: var(--secondary-color);
 }
-.icon-close {
+.channels .icon-close {
   color: gray;
   position: absolute;
   left: 15px;

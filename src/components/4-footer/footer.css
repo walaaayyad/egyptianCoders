@@ -19,3 +19,29 @@
     color: rgba(217, 213, 213, 0.819);
     text-decoration: none;
 }
+
+/*----------------------------------------------------------------------------------
+**********************************  MEDIA QUERY **********************************
+-----------------------------------------------------------------------------------*/
+/* TABLET SMALL VERSION ONLY */
+@media (max-width: 768px) {
+  .footer-social-links {
+    width: 20%;
+  }
+}
+
+/****************************************/
+/* MOBILE VERSION ONLY */
+@media (max-width: 576px) {
+  .footer-social-links {
+    width: 25%;
+  }
+}
+/****************************************/
+/* VERY SMALLMOBILE VERSION ONLY */
+
+@media (max-width: 460px) {
+  .footer-social-links {
+    width: 30%;
+  }
+}

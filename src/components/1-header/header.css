@@ -76,6 +76,12 @@
   font-size: 20px;
   color: var(--secondary-color);
 }
+.quick-list .list-item .icon-star,
+.quick-list .list-item .icon-star-o,
+.quick-list .list-item .icon-filter
+{
+  cursor: pointer;
+}
 .quick-list .list-item a {
   margin-right: 10px;
   text-decoration: none;

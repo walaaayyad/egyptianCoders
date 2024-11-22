@@ -4,7 +4,8 @@ import NavListData from './navListData'
 
 function header() {
   const [showList, setShowList] = useState(false);
-  const [favStar, setFavStar] = useState([]);
+  const storedFavStar = JSON.parse(localStorage.getItem('favStar'));
+  const [favStar, setFavStar] = useState(()=> storedFavStar ? storedFavStar : []);
   const channelsList = NavListData;
   console.log('fav star',favStar)
 
@@ -15,8 +16,11 @@ const toggleFavStar = (item)=> {
     newFav[item.id] ? delete  newFav[item.id] : newFav[item.id] = item;
     return newFav;
   });
-  console.log(item);
 }
+/* Save Favorite items in LocalStorage */
+useEffect(()=> {
+  localStorage.setItem('favStar', JSON.stringify(favStar))
+},[favStar])
 
   return (
     <div className='navBar'>

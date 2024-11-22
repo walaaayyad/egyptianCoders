@@ -3,9 +3,20 @@ import './header.css'
 import NavListData from './navListData'
 
 function header() {
-  const [showList, setShowList] = useState(false)
+  const [showList, setShowList] = useState(false);
+  const [favStar, setFavStar] = useState([]);
   const channelsList = NavListData;
-  console.log('channelsList',channelsList.length)
+  console.log('fav star',favStar)
+
+/* Handle Favorite Stars */
+const toggleFavStar = (item)=> {
+  setFavStar(prev => {
+    const newFav = {...prev};
+    newFav[item.id] ? delete  newFav[item.id] : newFav[item.id] = item;
+    return newFav;
+  });
+  console.log(item);
+}
 
   return (
     <div className='navBar'>
@@ -14,16 +25,24 @@ function header() {
       <div className={showList ? 'quick-list' : 'quick-list close'}>
         {/* <div className='listCloseBtn'><span className='icon-close' onClick={()=> setShowList(false)}></span>
         </div> */}
+        <span className='icon-filter'></span>
         {channelsList.map(item => {
         return (
-          <a 
-            key={item.id} 
-            href={`https://www.youtube.com/channel/${item.link}`} 
-            target="_blank">
-              <span className='icon-star-o'></span>
-              <img src={`./channel-Img/${item.img}`} alt="channel image" />
-            {item.title}
-          </a>
+          <div  className='list-item'
+                key={item.id}>
+            <span 
+              className={favStar[item.id] ? 'icon-star' : 'icon-star-o'}
+              onClick={()=> toggleFavStar(item)}>
+            </span>
+            <a className='flex' 
+              href={`https://www.youtube.com/channel/${item.link}`} 
+              target="_blank">
+                
+                <img src={`./channel-Img/${item.img}`} alt="channel image" />
+              {item.title}
+            </a>
+          </div>
+          
         )  
         })}
         

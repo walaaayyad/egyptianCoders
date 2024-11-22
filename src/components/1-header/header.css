@@ -51,19 +51,36 @@
   /* display: none; */
   scale: 0;
 }
-.quick-list a {
+.icon-filter {
+  color: var(--secondary-color);
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.quick-list .list-item {
   width: 350px;
   /* background-color: #fff; */
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 10px;
+  padding-right: 15px;
   margin: 10px;
   border-radius: 15px;
   background-color: #e6ebeb;
   box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), inset 15px 15px 10px rgba(255, 255, 255, 0.75), -5px -5px 30px rgba(255, 255, 255, 0.55), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
 }
-.quick-list img {
+.quick-list .list-item .icon-star {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.quick-list .list-item a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+.quick-list .list-item img {
   width: 40px;
   height: 40px;
   border-radius: 50%;

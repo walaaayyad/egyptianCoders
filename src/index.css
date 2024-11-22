@@ -12,7 +12,8 @@
 :root {
   /* --primary-color: #18214b; */
   --primary-color: #375752;
-  --secondary-color: #ffbf54;
+  --secondary-color: #ffab51;
+  /* --secondary-color: #ffbf54; */
 }
 html {
   scroll-behavior: smooth;

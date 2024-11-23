@@ -1,18 +1,24 @@
+/**********************
+  1- Nav Bar
+  2- Quick List Menu
+**********************/
+
+/********** 1- Nav Bar **********/
 .navBar {
   height: 70px;
   text-align: center;
   background-color: #fff;
   position: relative;
-  /* border-bottom: 1px solid var(--primary-color); */
 }
+
 .logo {
   width: 200px;
   border-radius: 50%;
   margin-top: -30px;
   padding: 0px 20px;
   background-color: #fff;
-  /* border-bottom: 2px dotted var(--primary-color); */
 }
+
 .navBar button {
   position: absolute;
   right: 20px;
@@ -25,33 +31,36 @@
   cursor: pointer;
 }
 
+/********** 2- Quick List Menu **********/
 .quick-list {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow-y: scroll;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  position: absolute;
+  position: fixed;
   top: 70px;
-  padding: 40px 0px;
+  left: 0;
+  padding: 40px 0px 100px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  z-index: 100;
+  justify-content: start;
+  z-index: 20;
   scale: 1;
   transition: all 1s ease;
 }
+
 .quick-list.close {
-  /* display: none; */
   scale: 0;
 }
-.icon-filter {
+
+.icon-filter,
+.icon-list {
   color: var(--secondary-color);
   font-size: 30px;
   position: absolute;
@@ -59,9 +68,9 @@
   right: 20px;
   cursor: pointer;
 }
+
 .quick-list .list-item {
-  width: 350px;
-  /* background-color: #fff; */
+  width: 400px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -72,20 +81,22 @@
   background-color: #e6ebeb;
   box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), inset 15px 15px 10px rgba(255, 255, 255, 0.75), -5px -5px 30px rgba(255, 255, 255, 0.55), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
 }
+
 .quick-list .list-item .icon-star {
   font-size: 20px;
   color: var(--secondary-color);
 }
+
 .quick-list .list-item .icon-star,
-.quick-list .list-item .icon-star-o,
-.quick-list .list-item .icon-filter
-{
+.quick-list .list-item .icon-star-o {
   cursor: pointer;
 }
+
 .quick-list .list-item a {
   margin-right: 10px;
   text-decoration: none;
 }
+
 .quick-list .list-item img {
   width: 40px;
   height: 40px;
@@ -93,25 +104,6 @@
   margin-left: 20px;
   margin-right: 12px;
 }
-/* .listCloseBtn {
-  width: 100%;
-  height: 60px;
-  position: relative;
-}
-.listCloseBtn span {
-  color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 /*----------------------------------------------------------------------------------
 **********************************  MEDIA QUERY **********************************
@@ -121,5 +113,8 @@
   .logo {
     width: 170px;
     margin-top: -15px;
+  }
+  .quick-list .list-item {
+  width: 320px;
   }
 }

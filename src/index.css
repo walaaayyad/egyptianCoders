@@ -21,7 +21,10 @@ html {
 }
 body {
   color: var(--primary-color);
-  background-color: rgb(19 1 23);;
+  background-color: rgb(19 1 23);
+}
+body.hide {
+  overflow: hidden;
 }
 .border {
   border: 1px solid red;

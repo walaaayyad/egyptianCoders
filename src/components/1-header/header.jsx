@@ -6,9 +6,17 @@ function header() {
   const [showList, setShowList] = useState(false);
   const storedFavStar = JSON.parse(localStorage.getItem('favStar'));
   const [favStar, setFavStar] = useState(()=> storedFavStar ? storedFavStar : []);
+  const [filtering, setFiltering] = useState(false);
   const channelsList = NavListData;
   console.log('fav star',favStar)
 
+/* Handle Open & Close Favorite Menu */
+const handleFavMenu = ()=> {
+  setShowList(!showList);
+}
+if(showList) {
+  document.body.classList.add('hide');
+}
 /* Handle Favorite Stars */
 const toggleFavStar = (item)=> {
   setFavStar(prev => {
@@ -22,15 +30,22 @@ useEffect(()=> {
   localStorage.setItem('favStar', JSON.stringify(favStar))
 },[favStar])
 
+/* Handle filter button */
+const handleFilterItems = ()=> {
+  setFiltering(prev => !prev);
+}
+const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
     <div className='navBar'>
       <img className='logo' src="./images/logo2.png" alt="" />
-      <button className={showList? 'icon-close' : 'icon-star'} onClick={()=> setShowList(!showList)}></button>
+      <button className={showList? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
       <div className={showList ? 'quick-list' : 'quick-list close'}>
-        {/* <div className='listCloseBtn'><span className='icon-close' onClick={()=> setShowList(false)}></span>
-        </div> */}
-        <span className='icon-filter'></span>
-        {channelsList.map(item => {
+
+        {/* Filter button */}
+        <span className={filtering ? 'icon-list' : 'icon-filter'} onClick={handleFilterItems}></span>
+
+        {/* Display filtered items or all items based on filtering state */}
+        {(filtering ? filteredItems : channelsList).map(item => {
         return (
           <div  className='list-item'
                 key={item.id}>

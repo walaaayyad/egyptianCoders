@@ -49,6 +49,7 @@ body.hide {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 1s ease;
 }
 .flex {
   display: flex;

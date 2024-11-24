@@ -2,7 +2,7 @@ import "./hero.css";
 
 function hero() {
   return (
-    <div className='hero flex'>
+    <div id="hero" className='hero flex'>
       <div className="container">
         <div className="heroTitle">
         <h1>دليل لمطوري البرمجيات المصريين  <br/>على يوتيوب</h1>

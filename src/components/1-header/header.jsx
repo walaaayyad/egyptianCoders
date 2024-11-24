@@ -1,18 +1,43 @@
 import { useEffect, useState } from 'react'
 import './header.css'
 import NavListData from './navListData'
+import hero from '../2-hero/hero';
 
 function header() {
   const [showList, setShowList] = useState(false);
   const storedFavStar = JSON.parse(localStorage.getItem('favStar'));
   const [favStar, setFavStar] = useState(()=> storedFavStar ? storedFavStar : []);
   const [filtering, setFiltering] = useState(false);
+  const [theme, setTheme] = useState('dark');
   const channelsList = NavListData;
   console.log('fav star',favStar)
 
+/************************** Dark & Light Mood ****************************/
+/* Handle Theme Btn */
+useEffect(()=> {
+ if(theme === 'light') {
+    document.body.classList.remove('dark');
+    document.body.classList.add('light')
+ } else if (theme === 'dark') {
+    document.body.classList.remove('light');
+    document.body.classList.add('dark')
+ }
+},[theme]);
+
+const handleTheme = ()=> {
+  setTheme(theme === "dark" ? "light" : "dark")
+  console.log(theme);
+}
+
+
+    
+
+
+/************************** Favorit Stars Items Menu ****************************/
 /* Handle Open & Close Favorite Menu */
 const handleFavMenu = ()=> {
   setShowList(!showList);
+  console.log(showList)
 }
 if(showList) {
   document.body.classList.add('hide');
@@ -38,7 +63,10 @@ const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
     <div className='navBar'>
       <img className='logo' src="./images/logo2.png" alt="" />
-      <button className={showList? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
+      <div className="navBtns flex">
+        <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
+        <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>
+      </div>
       <div className={showList ? 'quick-list' : 'quick-list close'}>
 
         {/* Filter button */}

@@ -1,9 +1,9 @@
 .footer {
    width: 80%;
    text-transform: capitalize;
-   color: rgb(217, 213, 213);
+   color: var(--text-color-DL);
    letter-spacing: 1.2px;
-   border-top: 1px solid rgba(255, 255, 255, 0.5);
+   border-top: 1px solid var(--text-color-DL);
    flex-direction: column;
    padding: 20px 0px;
    text-align: center;
@@ -16,7 +16,7 @@
     justify-content: space-evenly !important;
 }
 .footer-social-links a {
-    color: rgba(217, 213, 213, 0.819);
+    color: var(--text-color-DL);
     text-decoration: none;
 }
 

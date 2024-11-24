@@ -2,14 +2,9 @@
     height: 60vh;
     color: var(--secondary-color);
     flex-direction: column;
-    /* justify-content: end !important; */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('../../images/hero.jpg'); /*https://www.freepik.com/free-vector/egyptian-pyramids-night-landscape-cartoon_4394561.htm#fromView=image_search_similar&page=10&position=23&uuid=20b8d009-9f99-4be6-98f4-c764ec21bad5*/
-    background-repeat: no-repeat;
+    background: var(--background-img-DL);
     background-size: cover;
     background-position: center;
-    margin: 0px 30px;
-    border-radius: 30px;
-
 }
 .hero .container {
     flex-direction: column;
@@ -28,6 +23,7 @@
 }
 .heroTitle {
     text-align: center;
+    color: var(--secondary-color-DL);
 }
 .heroTitle h1 {
     font-size: 3.5em;
@@ -50,6 +46,21 @@
 }
 .hero-btn:active {
     transform: scale(0.8);
+}
+
+/****************** Light Theme ********************/
+/* .hero.light {
+  background-image: url('../../images/hero2.jpg'); /*https://www.freepik.com/free-vector/egyptian-pyramids-nile-river-sunset_39709567.htm#fromView=search&page=1&position=6&uuid=e7b2f365-d750-4a0e-a0b7-694e572ecfdf*
+} */
+.heroTitle.light {
+    /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 15px;
 }
 
 /*----------------------------------------------------------------------------------

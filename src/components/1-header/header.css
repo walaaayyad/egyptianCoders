@@ -126,4 +126,7 @@
   .quick-list .list-item {
   width: 320px;
   }
+  .navBtns {
+  width: 70px;
+  }
 }

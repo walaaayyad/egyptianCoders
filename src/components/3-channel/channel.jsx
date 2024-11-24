@@ -76,7 +76,8 @@ function YouTubeChannels() {
           <h2 className='title'>{channel.snippet.title}</h2>
           <p>{channel.snippet.description.length > 1 ? channel.snippet.description : "لا يوجد وصف للقناة"}</p>
           <a className='btn flex' href={`https://www.youtube.com/channel/${channel.id}`} target="_blank" rel="noopener noreferrer">
-            View Channel
+            <span className='icon-youtube-play'></span>
+            View Channel 
           </a>
         </div>
       ))

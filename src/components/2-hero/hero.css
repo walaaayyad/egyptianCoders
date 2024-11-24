@@ -1,11 +1,10 @@
 .hero {
     height: 60vh;
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
     flex-direction: column;
     background: var(--background-img-DL);
     background-size: cover;
     background-position: center;
-    transition:  'background' 1s ease;
 }
 .hero .container {
     flex-direction: column;
@@ -24,7 +23,7 @@
 }
 .heroTitle {
     text-align: center;
-    color: var(--secondary-color-DL);
+    color: var(--hero-text-color-DL);
 }
 .heroTitle h1 {
     font-size: 3.5em;
@@ -103,8 +102,8 @@
 
 @media (max-width: 460px) {
   .hero {
-    height: 35vh;
-    margin: 60px auto;
+    height: 100vh;
+    background-size: cover;
   }
   .heroTitle h1 {
     font-size: 40px;

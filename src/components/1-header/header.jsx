@@ -62,7 +62,7 @@ const handleFilterItems = ()=> {
 const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
     <div className='navBar'>
-      <img className='logo' src="./images/logo2.png" alt="" />
+      <img className='logo' src="src/images/logo3.png" alt="logo" />
       <div className="navBtns flex">
         <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
         <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>

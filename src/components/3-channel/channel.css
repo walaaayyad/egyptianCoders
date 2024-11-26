@@ -34,11 +34,12 @@
   padding: 10px;
   margin: 60px 10px;
   border-radius: 20px;
-  border: 0.5px solid var(--secondary-color-DL);
+  /* border: 0.5px solid var(--secondary-color-DL); */
   position: relative;    
   background: var(--secondary-bgColor-DL);
   color: var(--text-color-DL);
-  box-shadow: 2px 2px 6px #4c444880;
+  /* box-shadow: 2px 2px 6px #4c444880; */
+  box-shadow: var(--box-shadow-DL);
   transition: all 1s ease;
 }
 .img {
@@ -93,6 +94,8 @@
   border-radius: 20px;
   border: none;
   margin-bottom: 70px;
+  background-color: #f3f2fb;
+  box-shadow: inset -1px -1px 5px #ffffff83, inset 2px 2px 5px rgba(94, 104, 121, 0.688);
 }
 .searchBar:focus-visible {
   outline-color: var(--secondary-color-DL);

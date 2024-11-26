@@ -130,8 +130,8 @@
 /* VERY SMALLMOBILE VERSION ONLY */
 @media (max-width: 460px) {
   .logo {
-    width: 170px;
-    margin-top: -15px;
+    width: 90px;
+    /* margin-top: -15px; */
   }
   .quick-list .list-item {
   width: 320px;

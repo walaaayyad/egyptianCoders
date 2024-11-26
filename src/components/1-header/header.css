@@ -131,7 +131,7 @@
 @media (max-width: 460px) {
   .logo {
     width: 90px;
-    /* margin-top: -15px; */
+    margin-top: 6px;
   }
   .quick-list .list-item {
   width: 320px;

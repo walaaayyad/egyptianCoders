@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import './header.css'
 import NavListData from './navListData'
-import hero from '../2-hero/hero';
 
 function header() {
   const [showList, setShowList] = useState(false);
@@ -62,7 +61,7 @@ const handleFilterItems = ()=> {
 const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
     <div className='navBar'>
-      <img className='logo' src="src/images/logo3.png" alt="logo" />
+      <img className='logo' src="./images/logo3.png" alt="logo" />
       <div className="navBtns flex">
         <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
         <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>

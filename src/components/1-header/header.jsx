@@ -32,7 +32,7 @@ const handleTheme = ()=> {
     
 
 
-/************************** Favorit Stars Items Menu ****************************/
+/************************** Favorit Stars Items Menu  [ Popup Model ] ****************************/
 /* Handle Open & Close Favorite Menu */
 const handleFavMenu = ()=> {
   setShowList(!showList);
@@ -40,6 +40,8 @@ const handleFavMenu = ()=> {
 }
 if(showList) {
   document.body.classList.add('hide');
+} else {
+  document.body.classList.remove('hide');
 }
 /* Handle Favorite Stars */
 const toggleFavStar = (item)=> {
@@ -60,11 +62,13 @@ const handleFilterItems = ()=> {
 }
 const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
-    <div className='navBar'>
-      <img className='logo' src="./images/logo3.png" alt="logo" />
-      <div className="navBtns flex">
+    <div className=''>
+      <div className="navBar">
+        <img className='logo' src="./images/logo3.png" alt="logo" />
+        <div className="navBtns flex">
         <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
         <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>
+      </div>
       </div>
       <div className={showList ? 'quick-list' : 'quick-list close'}>
 

@@ -94,8 +94,9 @@
   padding-right: 15px;
   margin: 10px;
   border-radius: 15px;
-  background-color: #e6ebeb;
-  box-shadow: var(--box-shadow-DL)
+  background: var(--secondary-bgColor-DL);
+  color: var(--text-color-DL);
+  box-shadow: var(--box-shadow-DL);
 }
 
 .quick-list .list-item .icon-star {
@@ -111,6 +112,7 @@
 .quick-list .list-item a {
   margin-right: 10px;
   text-decoration: none;
+  color: var(--text-color-DL);
 }
 
 .quick-list .list-item img {

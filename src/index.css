@@ -19,7 +19,7 @@
   --text-color-DL : #ffffffcc;
   --hero-text-color-DL : #ffab51;
   --background-img-DL : linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('./images/hero.jpg'); /*https://www.freepik.com/free-vector/egyptian-pyramids-night-landscape-cartoon_4394561.htm#fromView=image_search_similar&page=10&position=23&uuid=20b8d009-9f99-4be6-98f4-c764ec21bad5*/
-  --box-shadow-DL: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), inset 6px 5px 10px rgba(238, 218, 172, 0.2), -5px -5px 30px rgba(238, 218, 172, 0.2), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+  --box-shadow-DL: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), inset 6px 5px 10px rgba(152, 131, 91, 0.2), -5px -5px 30px rgba(238, 218, 172, 0.2), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
   
 }
 .light {

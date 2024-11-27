@@ -32,6 +32,7 @@
   --text-color-DL : #000;
   --hero-text-color-DL : #fff;
   --box-shadow-DL : 30px 30px 30px -10px rgba(0, 0, 0, 0.15), inset 15px 15px 10px rgba(255, 255, 255, 0.75), -5px -5px 30px rgba(255, 255, 255, 0.55), inset -1px -1px 10px rgba(0, 0, 0, 0.2);
+  --border : 1.5px solid #ddd6ed33;
 }
 html {
   scroll-behavior: smooth;

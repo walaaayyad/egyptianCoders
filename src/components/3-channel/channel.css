@@ -38,8 +38,8 @@
   position: relative;    
   background: var(--secondary-bgColor-DL);
   color: var(--text-color-DL);
-  border-top: 1.5px solid #ddd6ed33;
-  border-left: 1.5px solid #ddd6ed33;
+  border-top: var(--border);
+  border-left: var(--border);
   /* box-shadow: 2px 2px 6px #4c444880; */
   box-shadow: var(--box-shadow-DL);
   transition: all 1s ease;

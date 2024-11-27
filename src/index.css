@@ -1,6 +1,7 @@
 /*
 1- General
 2- Container
+3- scrollUp-btn
 /*====================
       1- General
 ======================*/
@@ -63,6 +64,24 @@ body.hide {
   justify-content: center;
 }
 
+/*======================
+    3-scrollUp-btn
+=======================*/
+.scrollUp-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  cursor: pointer;
+  background: rgb(238, 146, 66);
+  background: linear-gradient(-45deg, rgb(231, 170, 37) 0%, #771f04 50%,  #771f04 70%, rgb(175, 131, 35) 100%);
+  background: -moz-linear-gradient(-45deg, rgb(231, 170, 37) 0%, #771f04 50%,  #771f04 70%, rgb(175, 131, 35) 100%);
+  background: -webkit-linear-gradient(-45deg, rgb(231, 170, 37) 0%, #771f04 50%,  #771f04 70%, rgb(175, 131, 35) 100%);
+  border: none;
+  z-index: 100;
+}
 
 
 /*----------------------------------------------------------------------------------

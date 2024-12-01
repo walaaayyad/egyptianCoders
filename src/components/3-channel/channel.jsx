@@ -71,11 +71,23 @@ function YouTubeChannels() {
       <div className='channels-content flex'>
         {filterSearchInput.length > 0 ? (
           filterSearchInput.map(channel => (
-        <div className="channel flex" key={channel.id}>
-          <img className='img' src={channel.snippet.thumbnails.default.url} alt={channel.snippet.title} />
+        <div 
+          className="channel flex" 
+          key={channel.id}>
+          <img 
+            className='img' 
+            src={channel.snippet.thumbnails.default.url} 
+            alt={channel.snippet.title} />
           <h2 className='title'>{channel.snippet.title}</h2>
-          <p>{channel.snippet.description.length > 1 ? channel.snippet.description : "لا يوجد وصف للقناة"}</p>
-          <a className='btn flex' href={`https://www.youtube.com/channel/${channel.id}`} target="_blank" rel="noopener noreferrer">
+          <p>{channel.snippet.description.length > 1 ? 
+              channel.snippet.description 
+              : "لا يوجد وصف للقناة"}</p>
+          <a 
+            className='btn flex' 
+            href={`https://www.youtube.com/channel/${channel.id}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Follow the link">
             <span className='icon-youtube-play'></span>
             View Channel 
           </a>

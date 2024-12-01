@@ -65,8 +65,16 @@ const filteredItems = channelsList.filter(item => favStar[item.id]);
       <div className="navBar">
         <img className='logo' src="./images/logo3.avif" alt="logo" />
         <div className="navBtns flex">
-        <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
-        <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>
+        <button 
+            className={showList ? 'icon-close' : 'icon-star'} 
+            onClick={handleFavMenu}
+            aria-label='favorite button'>
+        </button>
+        <button 
+            className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  
+            onClick={handleTheme}
+            aria-label='theme button'>
+        </button>
       </div>
       </div>
       <div className={showList ? 'quick-list' : 'quick-list close'}>
@@ -85,9 +93,9 @@ const filteredItems = channelsList.filter(item => favStar[item.id]);
             </span>
             <a className='flex' 
               href={`https://www.youtube.com/channel/${item.link}`} 
-              target="_blank">
-                
-                <img src={`./channel-Img/${item.img}`} alt="channel image" />
+              target="_blank"
+              aria-label="Follow channel link">  
+              <img src={`./channel-Img/${item.img}`} alt="channel image" />
               {item.title}
             </a>
           </div>

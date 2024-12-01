@@ -3,6 +3,7 @@ import Hero from "./components/2-hero/hero"
 import YouTubeChannels from "./components/3-channel/channel"
 import Footer from "./components/4-footer/footer";
 import { useState, useEffect} from "react";
+import { Helmet } from 'react-helmet';
 
 function App() {
 const [scrollUp, setScrollUp] = useState(false); 
@@ -16,6 +17,16 @@ useEffect(()=> {
 
     return (
         <>
+          <Helmet>
+            <title>Best YouTube Channels Created By Egyptian Developers</title>
+            <meta name="description" content="Discover the best YouTube channels for Egyptian developers. Learn programming, technology, and software development with curated content tailored for the Egyptian tech community." />
+            <meta name="keywords" content="Egyptian developers, YouTube channels, programming, software development, technology, tech community, coding tutorials" />
+            <meta property="og:title" content="Best YouTube Channels for Egyptian Developers" />
+            <meta property="og:description" content="Discover the best YouTube channels for Egyptian developers. Learn programming, technology, and software development with curated content tailored for the Egyptian tech community." />
+            <meta property="og:image" content="/images/logo3.avif" />
+            <meta property="og:url" content="https://walaaayyad.github.io/egyptianCoders/" />
+          </Helmet>
+
             <Header/>
             <Hero/>
             <YouTubeChannels/>

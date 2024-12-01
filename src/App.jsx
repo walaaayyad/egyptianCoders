@@ -21,7 +21,7 @@ useEffect(()=> {
             <YouTubeChannels/>
             {/* Add condition to check if the user scroll down so the button appear by change its opacity */}
             <a href="#hero" style={{opacity: scrollUp ? 1 : 0, transition: "1s"}}>
-            <button className="scrollUp-btn flex"><img src="./images/up.png" alt="" /></button> {/*https://www.freepik.com/icon/triangle_6844773#fromView=search&page=8&position=94&uuid=520a6f8f-869e-426a-8fda-056f8d31657c */}
+            <button className="scrollUp-btn flex"><img src="./images/up.avif" alt="" /></button> {/*https://www.freepik.com/icon/triangle_6844773#fromView=search&page=8&position=94&uuid=520a6f8f-869e-426a-8fda-056f8d31657c */}
             </a>
             <Footer/>
         </>

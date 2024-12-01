@@ -9,7 +9,6 @@ function header() {
   const [filtering, setFiltering] = useState(false);
   const [theme, setTheme] = useState('dark');
   const channelsList = NavListData;
-  console.log('fav star',favStar)
 
 /************************** Dark & Light Mood ****************************/
 /* Handle Theme Btn */
@@ -64,7 +63,7 @@ const filteredItems = channelsList.filter(item => favStar[item.id]);
   return (
     <div className=''>
       <div className="navBar">
-        <img className='logo' src="./images/logo3.png" alt="logo" />
+        <img className='logo' src="./images/logo3.avif" alt="logo" />
         <div className="navBtns flex">
         <button className={showList ? 'icon-close' : 'icon-star'} onClick={handleFavMenu}></button>
         <button className={theme === 'light' ? 'icon-moon-o':'icon-sun'}  onClick={handleTheme}></button>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './channel.css';
 
-function searchBar({handleSearchInput, searchVid, clearSearchBar}) {
+function SearchBar({handleSearchInput, searchVid, clearSearchBar}) {
   return (
     <div className='searchBox'>
         <input 
@@ -15,4 +15,4 @@ function searchBar({handleSearchInput, searchVid, clearSearchBar}) {
   )
 }
 
-export default searchBar
+export default SearchBar

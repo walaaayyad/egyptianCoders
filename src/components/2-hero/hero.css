@@ -31,7 +31,7 @@
 }
 .heroTitle p {
     font-size: 1.7em;
-    line-height: 50px;
+    line-height: 2;
 }
 .btns {
     width: 40%;
@@ -81,7 +81,7 @@
   }
   .heroTitle p {
     font-size: 1.2em;
-    line-height: 40px;
+    /* line-height: 40px; */
   }
 }
 /****************************************/
@@ -90,12 +90,12 @@
   .heroTitle h1 {
     font-size: 2em;
   }
-  .heroTitle p {
-    font-size: 1em;
-    line-height: 40px;
+  /* .heroTitle p {
+    /* font-size: 1em; 
+    /* line-height: 40px; 
     width: 90%;
     margin: auto;
-  }
+  } */
 }
 /****************************************/
 /* VERY SMALLMOBILE VERSION ONLY */
@@ -106,12 +106,12 @@
     background-size: cover;
   }
   .heroTitle h1 {
-    font-size: 40px;
+    /* font-size: 40px; */
     margin: 20px auto;
   }
   .heroTitle p {
-    line-height: 30px;
-    width: 98%;
-    font-size: 20px;
+    /* line-height: 1.5; */
+    width: 97%;
+    /* font-size: 20px; */
   }
 }

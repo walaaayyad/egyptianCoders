@@ -22,6 +22,20 @@
   margin-top: -5%;
   background-color: var(--primary-bgColor-DL);
 }
+.infinite-scroll-component {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.loading-msg {
+  color: #ffffffac;
+  width: 100%;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  text-align: center;
+  direction: ltr;
+}
 /*============================
     2- Channel Cards Style
 ==============================*/

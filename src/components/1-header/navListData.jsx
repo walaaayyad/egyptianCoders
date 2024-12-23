@@ -48,7 +48,16 @@ const NavListData = [
     {id:46, img:'amrMohamed.avif', title: 'Amr Mohamed', link: 'UCrKr6aiLvFxj1csAUfekiuw'},
     {id:47, img:'ahmedMohamady.avif', title: 'ahmed mohamady', link: 'UCh-Wyi7aWSkvGujc-5FKc4w'},
     {id:48, img:'arabDev.avif', title: 'Arab Developers', link: 'UCGn0UnpR7wbIzSXaKARH2dA'},
-    {id:49, img:'mohamedEbrahim.avif', title: 'Mohamed Ebrahim Saad', link: 'UCGbrg29FWhK503HN0KsPkjA'}
+    {id:49, img:'mohamedEbrahim.avif', title: 'Mohamed Ebrahim Saad', link: 'UCGbrg29FWhK503HN0KsPkjA'},
+    {id:50, img:'codeYehya.jpg', title: 'كَوّدْ مع يحيى', link: 'UC3Gj_7Zaa2pq8TIGPtzRKgQ'},
+    {id:51, img:'codeZetta.jpg', title: 'code zetta', link: 'UCTTVfSvYZq4H_MjOsnDDWyA'},
+    {id:52, img:'eyad.jpg', title: 'Eyad Alsherif', link: 'UCEPJ5HK6iYLA357Lza8znXA'},
+    {id:53, img:'kimzCodes.jpg', title: 'kimz codes', link: 'UC-MNF_TXywelItd7M8d-uHA'},
+    {id:54, img:'mo-elrefaey.jpg', title: 'Mahmoud Elrefaey', link: 'UCxqhxQEZBEzsNYiLbE7P5kA'},
+    {id:55, img:'mo-mostafa.jpg', title: 'Mohamed Mostafa', link: 'UCTGfjBfJjpbjTv5096uGoKw'},
+    {id:56, img:'mo-sharaf.jpg', title: 'mohamed sharaf', link: 'UCipGHaOCcqpEG-kVxClkPxw'},
+    {id:57, img:'mona.jpg', title: 'Mona Kandoz', link: 'UCFGib2Krj-I0MYVm7fd8ffQ'},
+    {id:58, img:'shababElMostakbal.jpg', title: 'شباب المستقبل للالعاب و التقنية', link: 'UCusjFTtAtkfcR394B1acEXw'},
 ]
 
 export default NavListData

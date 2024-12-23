@@ -2,16 +2,8 @@ import React from 'react'
 
 const data = [
     'UCveX_0uBOHVHbpV838OGXVA',
-    'UCSNkfKl4cU-55Nm-ovsvOHQ',
-    'UCvqYqoAu_Yp2v3hOBhi6qiQ',
-    'UCGP8LgaWO1lLfFQUQ2BA7rA',
     'UC5PbBz_roYczmUR6gg_OAxw',
-    'UCq_xgufsy1KrGsmJq7mFH-g',
-    'UCWX_0VvMxl0_XosvYOZ7O0g',
-    'UCbQh1yxBPVhyjB-G_blFFEQ',
     'UCFnqbM05-W4VpmzZj36-Kog',
-    'UC4Y8dVfo_-aydzENDmE7wTw',
-    'UC5COvx1Z8fnfvVkafqL_UZg',
     'UCy_3UvdcT8Ljbz6Md-6b32w',
     'UCs8PwUcH93uchrEZkB8ltNw',
     'UCw42KxUjtJ68yRXIHi6Fe-w',
@@ -19,7 +11,6 @@ const data = [
     'UC3UWam15SOjWxg_zCy0tXmw',
     'UCnGblT_CyMwswTIH9QmJ3YQ',
     'UCpnMFON8FKbCCHp8GTEYWHw',
-    'UCJu5uNExWKx1Vrv6Ah5SHfA',
     'UCdHbeembdjHbbCY5a3ZqXZw',
     'UCPpguAKsCona6eJBjWT-2Cw',
     'UC2Gl0VkJjuMZh2jUkW6GI7Q',
@@ -27,7 +18,6 @@ const data = [
     'UCNMvR21W292doQIU326HQTQ',
     'UCywDxXiDYW3fDsxN1CtFvEw',
     'UC4Hz-ntDHefICIBkutpadBA',
-    'UCtk1PX6rwD1A4yBsfXTVCcw',
     'UC0bLYqDH3v-4LgqqzJp9e2Q',
     'UCh-Wyi7aWSkvGujc-5FKc4w',
     'UC-TeQlDX3eBHHXvzCb7DH9g',
@@ -49,7 +39,15 @@ const data = [
     'UCYmPRHG8l6LMihiIV6xPhag',
     'UC1YeuVGPjFX-gKD5aK-Wfug',
     'UCGbrg29FWhK503HN0KsPkjA',
-    'UC3_wZsZVPqBH04GTwqZHmkQ'
+    'UC3_wZsZVPqBH04GTwqZHmkQ',
+    'UCFGib2Krj-I0MYVm7fd8ffQ',
+    'UCipGHaOCcqpEG-kVxClkPxw',
+    'UCEPJ5HK6iYLA357Lza8znXA',
+    'UCusjFTtAtkfcR394B1acEXw',
+    'UC3Gj_7Zaa2pq8TIGPtzRKgQ',
+    'UCTTVfSvYZq4H_MjOsnDDWyA',
+    'UCxqhxQEZBEzsNYiLbE7P5kA',
+    'UCTGfjBfJjpbjTv5096uGoKw'
   ]
 
 export default data

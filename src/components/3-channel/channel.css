@@ -4,7 +4,12 @@
     3- Search Bar
     4- Buttons
 ****************************/
-
+.wifi {
+  width: 100%;
+  font-size: 7rem;
+  text-align: center;
+  color: #375752b7;
+}
 /*============================
     1- General Style
 ==============================*/
@@ -41,6 +46,7 @@
 ==============================*/
 .channel {
   width: 30%;
+  min-width: 300px;
   height: 320px;
   flex-direction: column;
   justify-content: space-evenly !important;
@@ -222,5 +228,8 @@
   }
   .searchBar {
   width: 300px;
+  }
+  .wifi {
+  font-size: 5rem;
   }
 }

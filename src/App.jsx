@@ -32,7 +32,7 @@ function App() {
         <meta name="keywords" content="Egyptian developers, YouTube channels, programming, software development, technology, tech community, coding tutorials" />
         <meta property="og:title" content="Egyptian Coders" />
         <meta property="og:description" content="Discover the best YouTube channels for Egyptian developers. Learn programming, technology, and software development with curated content tailored for the Egyptian tech community." />
-        <meta property="og:image" content="public/images/logo3.avif" />
+        <meta property="og:image" content="/images/hero2.avif" />
         <meta property="og:url" content="https://walaaayyad.github.io/egyptianCoders/" />
       </Helmet>
 

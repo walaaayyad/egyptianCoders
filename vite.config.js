@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 const manifestForPlugIn = {
-  registerType: 'prompt',
+  registerType: 'prompt', // Or 'autoUpdate' if you prefer
   includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
   manifest: {
     name: 'Egyptian Coders',
@@ -46,5 +46,5 @@ const manifestForPlugIn = {
 
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugIn)],
-  base: '/egyptianCoders/', 
+  base: '/egyptianCoders/',  
 })

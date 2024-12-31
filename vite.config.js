@@ -46,5 +46,5 @@ const manifestForPlugIn = {
 
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugIn)],
-  base: '/',  
+  base: '/egyptianCoders/',  
 })

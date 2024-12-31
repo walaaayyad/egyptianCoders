@@ -35,18 +35,18 @@ const manifestForPlugIn = {
     background_color: '#ffffff',
     display: 'standalone',
     scope: '/',
-    start_url: '/',
+    start_url: '/egyptianCoders/',
     orientation: 'portrait',
     screenshots: [
     {
       src: '/screenshots/screenshot1.png', // Add this path
-      sizes: '600x448', // Specify dimensions of the screenshot
+      sizes: '1280x800', // Specify dimensions of the screenshot
       type: 'image/png',
       form_factor: 'wide', // Use 'wide' for desktop and other form factors for mobile
     },
     {
       src: '/screenshots/screenshot2.png', // Another screenshot for mobile devices
-      sizes: '400x591',
+      sizes: '400x600',
       type: 'image/png',
       form_factor: 'mobile',
     }

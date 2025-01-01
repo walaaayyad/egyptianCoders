@@ -69,17 +69,14 @@
 /* TABLET SMALL VERSION ONLY */
 @media (max-width: 768px) {
   .hero {
-    height: 40vh;
+    height: 60vh;
     margin: 0;
     border-radius: 0px;
     background-size: contain;
     background-color: #0e0020;
   }
-  .heroTitle h1 {
-    font-size: 2.5em;
-  }
   .heroTitle p {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 }
 /****************************************/
@@ -91,6 +88,9 @@
   .heroTitle h1 {
     font-size: 2.5em;
   }
+   .heroTitle p {
+    font-size: 1.3em;
+  }
 }
 /****************************************/
 /* VERY SMALLMOBILE VERSION ONLY */
@@ -101,10 +101,6 @@
     background-size: cover;
   }
   .heroTitle h1 {
-    font-size: 2em;
-    margin-top: 35px;
-  }
-  .heroTitle p {
-    font-size: 1em;
+    font-size: 2.2em;
   }
 }

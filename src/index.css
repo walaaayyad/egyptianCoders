@@ -24,7 +24,7 @@
   
 }
 .light {
-  --background-img-DL : url('./images/hero2.jpg'); /*https://www.freepik.com/free-vector/egyptian-pyramids-nile-river-sunset_39709567.htm#fromView=search&page=1&position=6&uuid=e7b2f365-d750-4a0e-a0b7-694e572ecfdf*/
+  --background-img-DL :linear-gradient(rgba(131, 11, 158, 0.3), rgba(45, 11, 158, 0.3)), url('./images/hero2.jpg'); /*https://www.freepik.com/free-vector/egyptian-pyramids-nile-river-sunset_39709567.htm#fromView=search&page=1&position=6&uuid=e7b2f365-d750-4a0e-a0b7-694e572ecfdf*/
   --secondary-color-DL : #745ab0;
   --secondary-border-DL : #ddd6ed;
   --primary-bgColor-DL : #fff;

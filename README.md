@@ -1,8 +1,52 @@
-# React + Vite
+# Egyptian Coders YouTube Channels
+This project is a web application that collects and displays YouTube channels of Egyptian developers. The channels are focused on providing valuable content for learning programming and software development. By using the YouTube API, the application dynamically fetches information about these channels and presents it in a user-friendly interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Page**
+<br> https://walaaayyad.github.io/egyptianCoders/
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Features**
+    **Search Functionality**: Users can search for channels based on keywords, making it easy to find specific content.
+
+    **Channel List**: Displays a curated list of Egyptian developers’ channels for learning programming, complete with thumbnails, descriptions, and links to each channel.
+
+    **Pagination**: Channels are loaded in chunks of 12 per page, with the option to load more as the user scrolls or clicks the "Load More" button.
+
+    **Error Handling**: Displays a friendly error message if the YouTube API fetch fails or there are connectivity issues.
+
+
+- **Tech Stack**
+   **React**: Frontend framework to build a dynamic and responsive user interface.
+   **YouTube API**: Fetches data for various channels.
+   **Axios**: HTTP client for making requests to the YouTube API.
+
+## Getting Started
+ **1- Clone the repository:**
+ ```bash
+    git clone https://github.com/walaaayyad/egyptianCoders.git
+    cd egyptianCoders
+```
+ **2- Install dependencies:**
+ ```bash
+    npm install
+```
+ **3- Set up the YouTube API Key:**
+ Create a .env file in the root of the project and add your YouTube API key
+
+ ```bash
+    VITE_YOUTUBE_API_KEY=your-youtube-api-key
+```
+
+ **4- Start the development server:**
+ ```bash
+    npm run dev
+```
+**5- Visit the app:**
+Open your browser and go to http://localhost:5173 to view the app.
+
+- **Contributing**
+   <br> Feel free to fork this project and submit pull requests. If you find any issues or have suggestions for improvements, please open an issue in the repository.
+
+- **License**
+  <br>  This project is licensed under the MIT License - see the LICENSE file for details.

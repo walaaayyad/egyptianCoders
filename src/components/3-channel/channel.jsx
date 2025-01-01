@@ -9,13 +9,15 @@ function YouTubeChannels() {
   const [channels, setChannels] = useState(InitialChannels); // List of channels
   const [error, setError] = useState(null);
   const [searchVid, setSearchVid] = useState('');
+  const [currentPage, setCurrentPage] = useState(1); // Track the current page
 
+  //----------------------------------------------------------------------
   // YouTube API key and Channel IDs
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
   const channelIds = Data.join(',');
 
   const fetchDataCalled = useRef(false); // Prevent duplicate API calls
-
+  //----------------------------------------------------------------------
   // Fetch channels based on the currentPage and itemsPerPage
   const fetchChannels = async () => {
     const apiUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails&id=${channelIds}&key=${apiKey.replace(/^['"]|['"]$/g, '')}`;
@@ -29,8 +31,8 @@ function YouTubeChannels() {
       setError(err); // Set error if fetching fails
     }
   };
-
-  // Fetch channels when the component mounts or when currentPage changes
+  //----------------------------------------------------------------------
+  // Fetch channels when the component mounts or when currentPage changes 
   useEffect(() => {
     // Only fetch data if it has not been fetched before
     if (!fetchDataCalled.current) {
@@ -38,22 +40,30 @@ function YouTubeChannels() {
       fetchDataCalled.current = true; // Mark as fetched
     }
   }, []); // Empty dependency array ensures it only runs once on mount
-
-  // Handle Search Input
+  //----------------------------------------------------------------------
+  // Handle Search Input 
   const handleSearchInput = (e) => {
     let lowerCase = e.target.value.toLowerCase();
     setSearchVid(lowerCase);
   };
-
-  // Filter channels based on user search input
+  //----------------------------------------------------------------------
+  // Filter channels based on user search input 
   const filterSearchInput = channels.filter((channel) => {
     return channel.snippet.title.toLowerCase().includes(searchVid);
   });
-
+  //----------------------------------------------------------------------
   // Clear the search input
   const clearSearchBar = () => {
     setSearchVid('');
   };
+  //----------------------------------------------------------------------
+  // Handle Load More Button 
+  const itemsPerPage = 12;
+  const currentChannels = filterSearchInput.slice(0, currentPage * itemsPerPage);
+  const handleLoadMore = () => {
+    setCurrentPage(prevPage => prevPage + 1);
+  };
+
 
   console.log('data', channels.length);
 
@@ -65,8 +75,8 @@ function YouTubeChannels() {
         clearSearchBar={clearSearchBar}
       />
       <div className="channels-content flex">
-        {filterSearchInput.length > 0 ? (
-          filterSearchInput.map((channel, index) => (
+        {currentChannels.length > 0 ? (
+          currentChannels.map((channel, index) => (
             <div className="channel flex" key={`${channel.id}-${index}`}>
               <img
                 className="img"
@@ -91,7 +101,22 @@ function YouTubeChannels() {
         ) : (
           <p>No Result</p>
         )}
-        <div className='container'><button className='loadMore_btn btn'>Load More</button></div>
+        <div className='container'>
+          {currentChannels.length !== channels.length ?
+          <button 
+            className='loadMore_btn btn'
+            onClick={handleLoadMore}
+          >
+            Load More
+          </button>
+          :
+          <button 
+            className='loadMore_btn btn'
+          >
+            No More
+          </button>
+        }
+        </div>
         {error && <div className="wifi"><span className="icon-wifi-off"></span></div>}
       </div>
     </div>

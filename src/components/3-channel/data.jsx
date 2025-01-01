@@ -1,7 +1,6 @@
 import React from 'react'
 
 const data = [
-    'UCveX_0uBOHVHbpV838OGXVA',
     'UC5PbBz_roYczmUR6gg_OAxw',
     'UCFnqbM05-W4VpmzZj36-Kog',
     'UCy_3UvdcT8Ljbz6Md-6b32w',

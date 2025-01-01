@@ -6,20 +6,21 @@ This project is a web application that collects and displays YouTube channels of
 
 ## Table of Contents
 
-- **Features**
-    **Search Functionality**: Users can search for channels based on keywords, making it easy to find specific content.
-
-    **Channel List**: Displays a curated list of Egyptian developers’ channels for learning programming, complete with thumbnails, descriptions, and links to each channel.
-
-    **Pagination**: Channels are loaded in chunks of 12 per page, with the option to load more as the user scrolls or clicks the "Load More" button.
+## Features
+  **- Search Functionality**:
+    Users can search for channels based on keywords, making it easy to find specific content.
+  **- Channel List**:
+    Displays a curated list of Egyptian developers’ channels for learning programming, complete with thumbnails, descriptions, and links to each channel.
+  **- Pagination**:
+    Channels are loaded in chunks of 12 per page, with the option to load more as the user scrolls or clicks the "Load More" button.
 
     **Error Handling**: Displays a friendly error message if the YouTube API fetch fails or there are connectivity issues.
 
 
-- **Tech Stack**
-   **React**: Frontend framework to build a dynamic and responsive user interface.
-   **YouTube API**: Fetches data for various channels.
-   **Axios**: HTTP client for making requests to the YouTube API.
+## Tech Stack
+   **- React**:Frontend framework to build a dynamic and responsive user interface.
+   **- YouTube API**: Fetches data for various channels.
+   **- Axios**: HTTP client for making requests to the YouTube API.
 
 ## Getting Started
  **1- Clone the repository:**

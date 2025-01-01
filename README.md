@@ -12,7 +12,7 @@ This project is a web application that collects and displays YouTube channels of
     <br>
     
   - **Channel List**:
-    Displays a curated list of Egyptian developers’ channels for learning programming, complete with thumbnails, descriptions, and links to each 
+    Displays a curated list of 60 Egyptian developers’ channels for learning programming, complete with thumbnails, descriptions, and links to each 
     channel.
     <br>
     

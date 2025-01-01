@@ -58,6 +58,8 @@ const NavListData = [
     {id:56, img:'mo-sharaf.jpg', title: 'mohamed sharaf', link: 'UCipGHaOCcqpEG-kVxClkPxw'},
     {id:57, img:'mona.jpg', title: 'Mona Kandoz', link: 'UCFGib2Krj-I0MYVm7fd8ffQ'},
     {id:58, img:'shababElMostakbal.jpg', title: 'شباب المستقبل للالعاب و التقنية', link: 'UCusjFTtAtkfcR394B1acEXw'},
+    {id:59, img:'amrAzouz.jpg', title: 'Amr Azouz عمرو عزوز', link: 'UC8zz-ZtdqHeS5-RQ5DpT4fg'},
+    {id:60, img:'radwan.jpg', title: 'Radwan Gaber', link: 'UCR4X-e-HiEFjxxnP_ZNjNQQ'},
 ]
 
 export default NavListData

@@ -46,7 +46,9 @@ const data = [
     'UC3Gj_7Zaa2pq8TIGPtzRKgQ',
     'UCTTVfSvYZq4H_MjOsnDDWyA',
     'UCxqhxQEZBEzsNYiLbE7P5kA',
-    'UCTGfjBfJjpbjTv5096uGoKw'
+    'UCTGfjBfJjpbjTv5096uGoKw',
+    'UC8zz-ZtdqHeS5-RQ5DpT4fg',
+    'UCR4X-e-HiEFjxxnP_ZNjNQQ'
   ]
 
 export default data

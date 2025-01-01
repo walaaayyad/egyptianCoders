@@ -7,7 +7,8 @@ function header() {
   const storedFavStar = JSON.parse(localStorage.getItem('favStar'));
   const [favStar, setFavStar] = useState(()=> storedFavStar ? storedFavStar : []);
   const [filtering, setFiltering] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const storedTheme = JSON.parse(localStorage.getItem('theme'));
+  const [theme, setTheme] = useState(()=> storedTheme ? storedTheme : 'dark');
   const channelsList = NavListData;
 
 /************************** Dark & Light Mood ****************************/
@@ -53,7 +54,8 @@ const toggleFavStar = (item)=> {
 /* Save Favorite items in LocalStorage */
 useEffect(()=> {
   localStorage.setItem('favStar', JSON.stringify(favStar))
-},[favStar])
+  localStorage.setItem('theme', JSON.stringify(theme))
+},[favStar, theme])
 
 /* Handle filter button */
 const handleFilterItems = ()=> {

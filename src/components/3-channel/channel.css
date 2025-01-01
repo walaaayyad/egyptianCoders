@@ -9,6 +9,7 @@
   font-size: 7rem;
   text-align: center;
   color: #375752b7;
+  margin-top: 35px;
 }
 /*============================
     1- General Style
@@ -100,6 +101,7 @@
   border-right: 1px dotted var(--secondary-color-DL);
   color: var(--secondary-color-DL);
   background: var(--secondary-bgColor-DL);
+  overflow-wrap: anywhere;
   transition: all 1s ease;
 }
 
@@ -148,6 +150,7 @@
   color: var(--secondary-color-DL);
   transition: all 0.5s ease;
 }
+.loadMore_btn,
 .btn:hover {
   box-shadow: none;
   color: #fff;
@@ -156,6 +159,10 @@
 .icon-youtube-play {
   color: #d11d1d;
   margin-left: 10px;
+}
+.loadMore_btn {
+  cursor: pointer;
+  font-size: 1.3em;
 }
 
 /*----------------------------------------------------------------------------------

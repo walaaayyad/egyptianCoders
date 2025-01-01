@@ -65,7 +65,6 @@ function YouTubeChannels() {
         clearSearchBar={clearSearchBar}
       />
       <div className="channels-content flex">
-        {error && <div className="wifi"><span className="icon-wifi-off"></span></div>}
         {filterSearchInput.length > 0 ? (
           filterSearchInput.map((channel, index) => (
             <div className="channel flex" key={`${channel.id}-${index}`}>
@@ -92,6 +91,8 @@ function YouTubeChannels() {
         ) : (
           <p>No Result</p>
         )}
+        <div className='container'><button className='loadMore_btn btn'>Load More</button></div>
+        {error && <div className="wifi"><span className="icon-wifi-off"></span></div>}
       </div>
     </div>
   );

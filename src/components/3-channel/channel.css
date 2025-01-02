@@ -252,4 +252,8 @@
   .wifi {
   font-size: 5rem;
   }
+  .loadMore_btn {
+        width: 65%;
+        font-size: 1.1em;
+    }
 }

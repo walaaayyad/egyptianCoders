@@ -1,6 +1,14 @@
 // Initialize channels (first 12 manually)
   const initialChannels = [
     {
+      id: 'UCSNkfKl4cU-55Nm-ovsvOHQ',
+      snippet: {
+        title: 'Elzero Web School',
+        description: "Life Is Short, Start Learning",
+        thumbnails: { default: { url: 'https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s176-c-k-c0x00ffffff-no-rj' } },
+      },
+    },
+    {
       id: 'UCWX_0VvMxl0_XosvYOZ7O0g',
       snippet: {
         title: 'محمد الدسوقى (Mohamed El Desouki)',
@@ -14,14 +22,6 @@
         title: 'Codezilla',
         description: "ان شاء الله تهدف قناة لتعليم البرمجة باللغة العربية، مقدمة اليكم من خبراء مجال التعليم و البرمجة، مجانا، و تناسب جميع الاعمار. تهدف القناة لتمكين شباب الوطن العربي و اعلاء مستواهم التقني البرمجي و ادراجهم في مجال التكنولوجيا حتى يتمكنوا من مواكبة سرعة التطور التكنولوجي بالعالم و نصبح وطن عربي قوي. تمكنك البرمجة من العمل من اي مكان و برواتب ممتازة نظرا لكثرة الطلب في سوق العمل و سرعة نموه.",
         thumbnails: { default: { url: 'https://yt3.ggpht.com/ytc/AIdro_nYbuEqGSXjzmOSI465CIJYU8wilmDifFYUxNR9zWELClg=s176-c-k-c0x00ffffff-no-rj' } },
-      },
-    },
-    {
-      id: 'UCSNkfKl4cU-55Nm-ovsvOHQ',
-      snippet: {
-        title: 'Elzero Web School',
-        description: "Life Is Short, Start Learning",
-        thumbnails: { default: { url: 'https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s176-c-k-c0x00ffffff-no-rj' } },
       },
     },
     {

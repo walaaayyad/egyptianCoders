@@ -8,7 +8,6 @@ const data = [
     'UCw42KxUjtJ68yRXIHi6Fe-w',
     'UCuwTHYdMavwEPsZ6OAkXfig',
     'UC3UWam15SOjWxg_zCy0tXmw',
-    'UCnGblT_CyMwswTIH9QmJ3YQ',
     'UCpnMFON8FKbCCHp8GTEYWHw',
     'UCdHbeembdjHbbCY5a3ZqXZw',
     'UCPpguAKsCona6eJBjWT-2Cw',
@@ -17,7 +16,6 @@ const data = [
     'UCNMvR21W292doQIU326HQTQ',
     'UCywDxXiDYW3fDsxN1CtFvEw',
     'UC4Hz-ntDHefICIBkutpadBA',
-    'UC0bLYqDH3v-4LgqqzJp9e2Q',
     'UCh-Wyi7aWSkvGujc-5FKc4w',
     'UC-TeQlDX3eBHHXvzCb7DH9g',
     'UCo0qWmxZdc1FhAL5emRNzcA',
@@ -48,7 +46,9 @@ const data = [
     'UCxqhxQEZBEzsNYiLbE7P5kA',
     'UCTGfjBfJjpbjTv5096uGoKw',
     'UC8zz-ZtdqHeS5-RQ5DpT4fg',
-    'UCR4X-e-HiEFjxxnP_ZNjNQQ'
+    'UCR4X-e-HiEFjxxnP_ZNjNQQ',
+    'UC-MNF_TXywelItd7M8d-uHA',
+    'UCtk1PX6rwD1A4yBsfXTVCcw'
   ]
 
 export default data

@@ -107,13 +107,12 @@ function YouTubeChannels() {
             className='loadMore_btn btn'
             onClick={handleLoadMore}
           >
-            Load More
+            View More Channels
           </button>
           :
           <button 
-            className='loadMore_btn btn'
+            className='hidden'
           >
-            No More
           </button>
         }
         </div>

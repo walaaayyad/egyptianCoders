@@ -162,7 +162,17 @@
 }
 .loadMore_btn {
   cursor: pointer;
+  font-size: 1.2em;
+  width: 30%;
+  font-family: inherit;
+  margin-bottom: 30px;
+  box-shadow: inset 3px 3px 7px rgba(255, 255, 255, 0.75), -2px -2px 7px rgba(255, 255, 255, 0.55), inset -5px -5px 7px rgba(0, 0, 0, 0.2);;
+}
+.loadMore_btn:hover {
   font-size: 1.3em;
+}
+.hidden {
+  display: none;
 }
 
 /*----------------------------------------------------------------------------------
@@ -195,6 +205,9 @@
   }
   .searchBar {
   width: 350px;
+  }
+     .loadMore_btn {
+    width: 50%;
   }
 }
 
